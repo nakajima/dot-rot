@@ -15,6 +15,7 @@ brew "zsh-syntax-highlighting"
 brew "atuin"
 brew "starship"
 brew "emacs"
+brew "gh"
 
 # Cask
 cask "raycast"
