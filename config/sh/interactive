@@ -1,0 +1,11 @@
+if [ "$USER" = "root" ]; then
+	PS1="# "
+else
+	PS1="$ "
+fi
+
+alias grep='grep --color=auto'
+alias gb='git branch -a -v'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --staged'

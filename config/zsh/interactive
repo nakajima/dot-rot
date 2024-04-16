@@ -1,0 +1,39 @@
+# shellcheck source=/dev/null
+source ~/.config/sh/interactive
+
+if [ -x "$(command -v starship)" ]; then
+	eval "$(starship init zsh)"
+fi
+
+if [ -x "$(command -v atuin)" ]; then
+  eval "$(atuin init zsh)"
+fi
+
+if [ -d "$HOMEBREW_PREFIX/share/zsh/site-functions" ]; then
+	FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH"
+fi
+if [ -d "$XDG_CACHE_HOME" ]; then
+	autoload -Uz compinit
+	mkdir -p "$XDG_CACHE_HOME/zsh"
+	compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+fi
+
+# force emacs bindings
+bindkey -e
+
+# bash navigation
+autoload -U select-word-style
+select-word-style bash
+
+if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
+	source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+	bindkey '\t\t' autosuggest-accept
+fi
+if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
+	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+# direnv
+if [ -x "$(command -v direnv)" ]; then
+	eval "$(direnv hook zsh)"
+fi

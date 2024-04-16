@@ -1,0 +1,29 @@
+# Taps
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+# Homebrew
+brew "direnv"
+brew "git"
+brew "jq"
+brew "mas"
+brew "swiftformat"
+brew "tailscale"
+brew "wget"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "atuin"
+brew "starship"
+brew "emacs"
+
+# Cask
+cask "raycast"
+cask "visual-studio-code"
+cask "docker"
+cask "discord"
+cask "slack"
+cask "spotify"
+
+# Mac App Store
+mas "iA Writer", id: 775737590
+mas "Tailscale", id: 1475387142

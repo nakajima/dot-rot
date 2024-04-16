@@ -1,0 +1,5 @@
+# shellcheck source=/dev/null
+source ~/.config/sh/login
+
+DOTFILES=$(cd "$(dirname "${0:A}")/../.." && pwd)
+export DOTFILES
