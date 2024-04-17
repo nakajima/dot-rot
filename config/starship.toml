@@ -1,3 +1,5 @@
+# Might want to get this font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
@@ -50,6 +52,7 @@ symbol = "deno "
 symbol = ".NET "
 
 [directory]
+truncate_to_repo = false
 read_only = " ro"
 
 [docker_context]
@@ -70,8 +73,8 @@ symbol = "fossil "
 [gcloud]
 symbol = "gcp "
 
-[git_branch]
-symbol = "git "
+# [git_branch]
+# symbol = ""
 
 [golang]
 symbol = "go "
