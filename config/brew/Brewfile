@@ -29,3 +29,6 @@ cask "spotify"
 mas "iA Writer", id: 775737590
 mas "Tailscale", id: 1475387142
 mas "1Password 7", id: 1333542190
+mas "SQLiteFlow", id: 1378587993
+mas "Ivory", id: 6444602274
+mas "Pixelmator Pro", id: 1289583905

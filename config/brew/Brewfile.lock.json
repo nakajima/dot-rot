@@ -612,7 +612,16 @@
       "1Password 7": {
         "id": "1333542190",
         "version": "7.9.11"
-      }
+      },
+      "SQLiteFlow": {
+        "id": "1378587993",
+        "version": "6.3.6"
+      },
+      "Ivory": {
+        "id": "6444602274",
+        "version": "1.9.3"
+      },
+      "Pixelmator Pro": null
     }
   },
   "system": {

@@ -1,8 +1,8 @@
 # Might want to get this font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 
 [character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"
 vimcmd_symbol = "[<](bold green)"
 
 [directory]

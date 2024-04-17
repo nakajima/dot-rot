@@ -47,3 +47,5 @@ cat > ~/Library/KeyBindings/DefaultKeyBinding.dict <<-EOM
   };
 }
 EOM
+
+ln -s "$HOME/apps/dot-rot/nakajima.idekeybindings" "$HOME/Library/Developer/Xcode/UserData/KeyBindings/nakajima.idekeybindings"
