@@ -28,3 +28,4 @@ cask "spotify"
 # Mac App Store
 mas "iA Writer", id: 775737590
 mas "Tailscale", id: 1475387142
+mas "1Password 7", id: 1333542190
