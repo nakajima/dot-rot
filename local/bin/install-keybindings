@@ -48,4 +48,5 @@ cat > ~/Library/KeyBindings/DefaultKeyBinding.dict <<-EOM
 }
 EOM
 
+mkdir -p /Users/nakajima/Library/Developer/Xcode/UserData/KeyBindings/
 ln -s "$HOME/apps/dot-rot/nakajima.idekeybindings" "$HOME/Library/Developer/Xcode/UserData/KeyBindings/nakajima.idekeybindings"
