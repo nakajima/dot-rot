@@ -16,6 +16,7 @@ brew "atuin"
 brew "starship"
 brew "emacs"
 brew "gh"
+brew "finestructure/tap/arena"
 
 # Cask
 cask "raycast"

@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "f46a1db7ef9f2e017f6b01b7737e2af275270cfc"
+        "revision": "bfeed4463404184c561460dcd7edaa0f7fe497c0"
       },
       "homebrew/services": {
         "revision": "a6fcf4f1ce20c6e01a0ff051074e7e9d30a887e1"
@@ -560,6 +560,8 @@
             }
           }
         }
+      },
+      "finestructure/tap/arena": {
       }
     },
     "cask": {
@@ -601,12 +603,30 @@
       }
     },
     "mas": {
-      "iA Writer": null,
-      "Tailscale": null,
-      "1Password 7": null,
-      "SQLiteFlow": null,
-      "Ivory": null,
-      "Pixelmator Pro": null
+      "iA Writer": {
+        "id": "775737590",
+        "version": "7.1.1"
+      },
+      "Tailscale": {
+        "id": "1475387142",
+        "version": "1.64.0"
+      },
+      "1Password 7": {
+        "id": "1333542190",
+        "version": "7.9.11"
+      },
+      "SQLiteFlow": {
+        "id": "1378587993",
+        "version": "6.3.6"
+      },
+      "Ivory": {
+        "id": "6444602274",
+        "version": "1.9.3"
+      },
+      "Pixelmator Pro": {
+        "id": "1289583905",
+        "version": "3.5.8"
+      }
     }
   },
   "system": {
