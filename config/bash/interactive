@@ -20,3 +20,5 @@ fi
 
 # aliases
 alias dotrot="emacs $HOME/apps/dot-rot"
+
+PS1="$(starship prompt)
