@@ -28,6 +28,8 @@ mkdir -p "$HOME/.local"
 
 dotlink "zprofile"
 dotlink "zshrc"
+dotlink "bashprofile"
+dotlink "bashrc"
 
 for src in "$dotfiles/config"/*; do
 	dotlink "config/$(basename "$src")"
