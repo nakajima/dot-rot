@@ -8,13 +8,6 @@ $swift$git_branch$all"""
 # Disable the blank line at the start of the prompt
 add_newline = false
 
-[time]
-disabled = false
-use_12hr = true
-
-[localip]
-disabled = false
-
 [git_metrics]
 disabled = false
 
