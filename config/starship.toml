@@ -16,7 +16,7 @@ disabled = false
 
 [os.symbols]
 Macos = "\ue711"
-Ubuntu = "\uf31b"
+Ubuntu = " \uf31b"
 
 [git_metrics]
 disabled = false
