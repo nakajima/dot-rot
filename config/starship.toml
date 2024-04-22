@@ -1,5 +1,12 @@
 # Might want to get this font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 
+format = """
+$all\
+$directory$character"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
 [character]
 success_symbol = "[\\$](bold green)"
 error_symbol = "[\\$](bold red)"

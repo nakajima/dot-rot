@@ -40,3 +40,4 @@ fi
 
 # aliases
 alias fs="swiftformat ."
+alias dotrot="code $HOME/apps/dot-rot"
