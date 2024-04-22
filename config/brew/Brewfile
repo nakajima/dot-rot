@@ -3,10 +3,8 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 
 # Homebrew
-brew "direnv"
 brew "git"
 brew "jq"
-brew "swiftformat"
 brew "tailscale"
 brew "wget"
 brew "zsh-autosuggestions"
@@ -17,6 +15,8 @@ brew "emacs"
 brew "gh"
 
 if OS.mac?
+brew "swiftformat"
+brew "direnv"
 brew "finestructure/tap/arena"
 brew "mas"
 
