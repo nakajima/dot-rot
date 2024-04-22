@@ -25,10 +25,11 @@ bindkey -e
 autoload -U select-word-style
 select-word-style bash
 
-# if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
-# 	source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-# 	bindkey '\t\t' autosuggest-accept
-# fi
+if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
+	source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+	bindkey '\t\t' autosuggest-accept
+fi
+
 if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
 	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
