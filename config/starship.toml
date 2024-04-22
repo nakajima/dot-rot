@@ -1,8 +1,9 @@
 # Might want to get this font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 
-format = """
-$all\
-$directory$character"""
+format = """$directory$character"""
+
+right_format = """
+$swift$git_branch$git_status$all"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -15,3 +16,7 @@ vimcmd_symbol = "[<](bold green)"
 [directory]
 truncate_to_repo = false
 read_only = " ro"
+
+[swift]
+format = "\ue755 "
+detect_files = ['Package.swift', '.swiftformat']
