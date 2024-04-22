@@ -8,6 +8,16 @@ $swift$git_branch$all"""
 # Disable the blank line at the start of the prompt
 add_newline = false
 
+[hostname]
+format = '[$ssh_symbol$hostname]($style)'
+
+[os]
+disabled = false
+
+[os.symbols]
+Macos = "\ue711"
+Ubuntu = "\ue73a"
+
 [git_metrics]
 disabled = false
 
