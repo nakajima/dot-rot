@@ -3,10 +3,26 @@
 format = """$directory$character"""
 
 right_format = """
-$swift$git_branch$git_status$all"""
+$swift$git_branch$all"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
+
+[time]
+disabled = false
+use_12hr = true
+
+[localip]
+disabled = false
+
+[git_metrics]
+disabled = false
+
+[line_break]
+disabled = true
+
+[git_status]
+disabled = true
 
 [character]
 success_symbol = "[\\$](bold green)"

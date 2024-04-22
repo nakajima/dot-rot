@@ -6,7 +6,6 @@ tap "homebrew/services"
 brew "direnv"
 brew "git"
 brew "jq"
-brew "mas"
 brew "swiftformat"
 brew "tailscale"
 brew "wget"
@@ -16,7 +15,10 @@ brew "atuin"
 brew "starship"
 brew "emacs"
 brew "gh"
+
+if OS.mac?
 brew "finestructure/tap/arena"
+brew "mas"
 
 # Cask
 cask "raycast"
@@ -33,3 +35,4 @@ mas "1Password 7", id: 1333542190
 mas "SQLiteFlow", id: 1378587993
 mas "Ivory", id: 6444602274
 mas "Pixelmator Pro", id: 1289583905
+end
