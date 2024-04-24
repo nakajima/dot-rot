@@ -21,6 +21,7 @@ brew "finestructure/tap/arena"
 brew "mas"
 
 # Cask
+cask "ngrok"
 cask "raycast"
 cask "visual-studio-code"
 cask "docker"
