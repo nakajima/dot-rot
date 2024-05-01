@@ -12,6 +12,7 @@ brew "atuin"
 brew "starship"
 brew "emacs"
 brew "gh"
+brew "npm"
 
 if OS.mac?
 brew "git"
@@ -19,6 +20,7 @@ brew "swiftformat"
 brew "direnv"
 brew "finestructure/tap/arena"
 brew "mas"
+brew "tidy-html5"
 
 # Cask
 cask "ngrok"
