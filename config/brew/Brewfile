@@ -31,6 +31,7 @@ cask "discord"
 cask "slack"
 cask "spotify"
 cask "iina"
+cask "swiftformat-for-xcode"
 
 # Mac App Store
 mas "iA Writer", id: 775737590
