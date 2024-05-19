@@ -21,6 +21,7 @@ brew "direnv"
 brew "finestructure/tap/arena"
 brew "mas"
 brew "tidy-html5"
+brew "cmake"
 
 # Cask
 cask "ngrok"

@@ -1,6 +1,6 @@
 # Might want to get this font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip
 
-format = """$directory$character"""
+format = """$hostname$directory$character"""
 
 right_format = """
 $swift$git_branch$all"""
