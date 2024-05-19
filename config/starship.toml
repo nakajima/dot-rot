@@ -10,7 +10,7 @@ add_newline = false
 
 [hostname]
 ssh_symbol = "\uf233 "
-format = '[$ssh_symbol$hostname]($style)'
+format = '[$ssh_symbol$hostname]($style) '
 
 [os]
 disabled = false
