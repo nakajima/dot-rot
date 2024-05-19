@@ -1,4 +1,4 @@
 #!/bin/sh
 
-source "$HOME/.backup-env"
+. "$HOME/.backup-env"
 PASSPHRASE="$BACKUP_BUCKET_PASSWORD" duplicity backup $BACKUP_DIRECTORY "b2://$BACKUP_USERNAME:$BACKUP_PASSWORD@$BACKUP_BUCKET" --exclude="$HOME/.cache/*" --exclude="$HOME/snap/*"
