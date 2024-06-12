@@ -37,6 +37,7 @@ cask "slack"
 cask "spotify"
 cask "iina"
 cask "swiftformat-for-xcode"
+cask "utm"
 
 # Mac App Store
 mas "iA Writer", id: 775737590

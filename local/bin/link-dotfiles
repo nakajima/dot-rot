@@ -28,6 +28,7 @@ mkdir -p "$HOME/.local"
 
 dotlink "zprofile"
 dotlink "zshrc"
+dotlink "sqliterc"
 dotlink "local/bin"
 
 for src in "$dotfiles/config"/*; do
