@@ -13,6 +13,23 @@ return {
 				},
 			}
 
+			lspconfig.dockerls.setup {
+				settings = {
+					docker = {
+						workspaceFolder = {
+							"docker-compose.yml",
+							"Dockerfile",
+						},
+						languageserver = {
+							formatter = {
+								ignoreMultilineInstructions = true,
+							},
+						},
+					},
+				},
+
+			}
+
 			lspconfig.lua_ls.setup { settings = {
 				Lua = {
 					runtime = {
