@@ -14,6 +14,7 @@ return {
       local luasnip = require('luasnip')
       local opts = {
         sources = cmp.config.sources {
+					{ name = "copilot" },
           { name = "nvim_lsp", },
           { name = "path", },
           { name = "buffer", },
