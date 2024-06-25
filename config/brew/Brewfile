@@ -13,6 +13,7 @@ brew "starship"
 brew "emacs"
 brew "gh"
 brew "neovim"
+brew "lua-language-server"
 
 if OS.linux?
 brew "duplicity"
