@@ -11,13 +11,3 @@ vim.cmd([[
 
 vim.cmd("map <S-Esc> :NvimTreeFocus <CR>")
 
--- Add pair match completions
-vim.cmd("inoremap ' ''<left>")
-vim.cmd("inoremap \" \"\"<left>")
-vim.cmd("inoremap ( ()<left>")
-vim.cmd("inoremap [ []<left>")
-vim.cmd("inoremap { {}<left>")
-vim.cmd("inoremap {<CR> {<CR>}<ESC>O")
-vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
-
-

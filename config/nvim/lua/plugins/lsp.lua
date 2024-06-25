@@ -1,38 +1,25 @@
 return {
-	"dundalek/lazy-lsp.nvim",
-	dependencies = {
-		"neovim/nvim-lspconfig",
-		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/nvim-cmp",
-	},
-	config = function()
-		local lsp_zero = require("lsp-zero")
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require('lspconfig')
+    lspconfig.sourcekit.setup {
+      capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      }
 
-		lsp_zero.on_attach(function(client, bufnr)
-			-- see :help lsp-zero-keybindings to learn the available actions
-			lsp_zero.default_keymaps({
-				buffer = bufnr,
-				preserve_mappings = false
-			})
-		end)
-
-		require("lazy-lsp").setup {
-			preferred_servers = {
-				nix = { "nixd" },
-			},
-			configs = {
-				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = {
-								-- Get the language server to recognize the `vim` global
-								globals = { "vim" },
-							},
-						},
-					},
-				},
-			},
-		}
-	end,
+      vim.api.nvim_create_autocmd('LspAttach', {
+        desc = "LSP Actions",
+        callback = function(args)
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, {noremap = true, silent = true})
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, {noremap = true, silent = true})
+        end,
+      })
+    end,
+  },
 }
