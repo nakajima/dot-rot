@@ -12,7 +12,7 @@ brew "atuin"
 brew "starship"
 brew "emacs"
 brew "gh"
-brew "npm"
+brew "neovim"
 
 if OS.linux?
 brew "duplicity"

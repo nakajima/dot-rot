@@ -4,7 +4,7 @@
   "copilot-cmp": { "branch": "master", "commit": "b6e5286b3d74b04256d0a7e3bd2908eabec34b44" },
   "copilot.lua": { "branch": "master", "commit": "86537b286f18783f8b67bccd78a4ef4345679625" },
   "lazy-lsp.nvim": { "branch": "master", "commit": "17deb64279389056b6edd4b0619d8dc391798b6a" },
-  "lazy.nvim": { "branch": "main", "commit": "dea1f687fe6e15eb3098557a69d44231ebcb6cf5" },
+  "lazy.nvim": { "branch": "main", "commit": "378bfb465673a747e9e9f966e518063499e20cfe" },
   "lsp-zero.nvim": { "branch": "v3.x", "commit": "16de3b18c5f7b6230d89b8e64ce9a4801b6f8d08" },
   "nvim-cmp": { "branch": "main", "commit": "a110e12d0b58eefcf5b771f533fc2cf3050680ac" },
   "nvim-lspconfig": { "branch": "master", "commit": "9c9eb07fecc578e25e28db8dc9002b43fff2ed79" },
