@@ -26,6 +26,7 @@ brew "finestructure/tap/arena"
 brew "mas"
 brew "tidy-html5"
 brew "cmake"
+brew "iterm2"
 
 # Cask
 cask "ngrok"
