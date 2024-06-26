@@ -22,5 +22,6 @@
   "precognition.nvim": { "branch": "main", "commit": "2a566f03eb06859298eff837f3a6686dfa5304a5" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "vim-fugitive": { "branch": "master", "commit": "d0c1a437536778bcc8174b7cb2ffdf98f611e6fe" },
+  "vim-test": { "branch": "master", "commit": "34aab77f7a63f20a623df45684156915f6182a55" },
   "which-key.nvim": { "branch": "main", "commit": "0099511294f16b81c696004fa6a403b0ae61f7a0" }
 }
