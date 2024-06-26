@@ -1,3 +1,5 @@
+-- Status line setup
+
 local fn = vim.fn
 local api = vim.api
 
