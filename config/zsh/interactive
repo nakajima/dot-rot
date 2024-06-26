@@ -39,7 +39,7 @@ if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
 fi
 
 if [ -d "$HOME/.local/share/swiftly" ]; then
-	source "$HOME/.local/share/swiftly/env.sh
+	source "$HOME/.local/share/swiftly/env.sh"
 fi
 
 # direnv
