@@ -38,6 +38,10 @@ if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
 	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
+if [ -d "$HOME/.local/share/swiftly" ]; then
+	source "$HOME/.local/share/swiftly/env.sh
+fi
+
 # direnv
 if [ -x "$(command -v direnv)" ]; then
 	eval "$(direnv hook zsh)"
