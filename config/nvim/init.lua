@@ -8,17 +8,14 @@ vim.cmd([[
 	set tabstop=2
 	set shiftwidth=2
 	set number
+
+	nmap <silent> <c-k> :wincmd k<CR>
+	nmap <silent> <c-j> :wincmd j<CR>
+	nmap <silent> <c-h> :wincmd h<CR>
+	nmap <silent> <c-l> :wincmd l<CR>
 ]])
 
--- Easier pane navigation
-vim.cmd([[
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
-
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-]])
+vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files<cr>")
 
 vim.cmd("map <S-Esc> :NvimTreeFocus <CR>")
 vim.api.nvim_create_user_command('Format', function()

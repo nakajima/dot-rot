@@ -15,6 +15,7 @@ brew "gh"
 brew "neovim"
 brew "lua-language-server"
 brew "ripgrep"
+brew "node"
 
 if OS.linux?
 brew "duplicity"
