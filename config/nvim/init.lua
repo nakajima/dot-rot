@@ -10,6 +10,14 @@ vim.cmd([[
 	set number
 ]])
 
+-- Easier pane navigation
+vim.cmd([[
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+]])
+
 vim.cmd("map <S-Esc> :NvimTreeFocus <CR>")
 vim.api.nvim_create_user_command('Format', function()
 	vim.lsp.buf.format({ async = true })
