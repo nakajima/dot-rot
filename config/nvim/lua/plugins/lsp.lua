@@ -27,7 +27,6 @@ return {
 						},
 					},
 				},
-
 			}
 
 			lspconfig.lua_ls.setup { settings = {
@@ -59,7 +58,8 @@ return {
 				desc = "LSP Actions",
 				callback = function(args)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true })
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+					vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { noremap = true, silent = true })
+					vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true })
 				end,
 			})
 		end,
