@@ -16,6 +16,7 @@ brew "neovim"
 brew "lua-language-server"
 brew "ripgrep"
 brew "node"
+brew "swiftformat"
 
 if OS.linux?
 brew "duplicity"
