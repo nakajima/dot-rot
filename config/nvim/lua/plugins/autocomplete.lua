@@ -11,7 +11,6 @@ return {
     },
     config = function()
       local cmp = require('cmp')
-      local luasnip = require('luasnip')
       local opts = {
         sources = cmp.config.sources {
           { name = "nvim_lsp", },
@@ -26,9 +25,6 @@ return {
             if cmp.visible() then
               print("cmp expand")
               cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-              print("snippet expand")
-              luasnip.expand_or_jump()
             else
               print("fallback")
               original()
@@ -37,8 +33,6 @@ return {
           ["<S-tab>"] = cmp.mapping(function(original)
             if cmp.visible() then
               cmp.select_prev_item()
-            elseif luasnip.expand_or_jumpable() then
-              luasnip.jump(-1)
             else
               original()
             end

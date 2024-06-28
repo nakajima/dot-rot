@@ -1,8 +1,9 @@
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
--- FileTypes
+vim.cmd("autocmd TextChanged,TextChangedI <buffer> silent write")
 
+-- FileTypes
 augroup("SetFileTypes", { clear = true })
 autocmd({'Bufread', 'Bufnewfile'}, {
   group = 'SetFileTypes',

@@ -10,6 +10,7 @@ wk.setup()
 --  command-mode      "c"
 
 wk.register({
+	["<leader>w"] = { "<cmd>w<CR>", "Save" },
 	["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find file..." },
 	["<c-k>"] = { "<cmd>wincmd k<CR>", "Move up buffer" },
 	["<c-j>"] = { "<cmd>wincmd j<CR>", "Move down buffer" },
@@ -40,3 +41,4 @@ wk.register({
   noremap = true,
   silent = true,
 })
+
