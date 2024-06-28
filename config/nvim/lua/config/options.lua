@@ -11,6 +11,7 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.number = true
 opt.modeline = true
+opt.filetype = 'on'
 
 vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files<cr>")
 

@@ -10,6 +10,13 @@ autocmd({'Bufread', 'Bufnewfile'}, {
   command = 'setlocal ft=cpp',
 })
 
+augroup("SetFileTypes", { clear = true })
+autocmd({'Bufread', 'Bufnewfile'}, {
+  group = 'SetFileTypes',
+  pattern = {'*.swlox'},
+  command = 'setfiletype swlox',
+})
+
 autocmd({'Bufread', 'Bufnewfile'}, {
   group = 'SetFileTypes',
   pattern = '*.ll',
