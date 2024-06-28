@@ -7,7 +7,7 @@ return { {
 			ensure_installed = { "c", "swift", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
 			sync_install = false,
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = { enable = false },
 			auto_install = true,
 			modules = {},
 			ignore_install = {},

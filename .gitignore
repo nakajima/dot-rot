@@ -1,3 +1,4 @@
+config/nvim/lazy-lock.json
 local/bin/clang
 local/bin/clang++
 local/bin/clang-15
