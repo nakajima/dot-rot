@@ -1,4 +1,1 @@
-"var" @keyword
-"print" @function
-(variable) @variable
-(number_literal) @number
+/home/nakajima/apps/swlox/tree-sitter-swlox/queries/highlights.scm
