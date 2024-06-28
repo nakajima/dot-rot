@@ -13,8 +13,10 @@ opt.number = true
 opt.modeline = true
 
 vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files<cr>")
+vim.cmd("nnoremap <cmd>Fs <cmd>!swiftformat .<cr>")
 
 vim.api.nvim_create_user_command('Format', function()
 	vim.lsp.buf.format({ async = true })
 end, {})
+
 
