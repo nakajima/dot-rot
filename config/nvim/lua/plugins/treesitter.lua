@@ -15,16 +15,16 @@ return {
       })
 
       local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-      parser_config.swlox = {
+      parser_config.talktalk = {
         install_info = {
-          url = "~/apps/swlox/tree-sitter-swlox", -- local path or git repo
+          url = "~/apps/talktalk/tree-sitter-talktalk", -- local path or git repo
           files = {"src/parser.c"}, -- note that some parsers also require src/scanner.c or src/scanner.cc
           -- optional entries:
           branch = "main", -- default branch in case of git repo if different from master
           generate_requires_npm = true,
           requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
         },
-        filetype = "swlox", -- if filetype does not match the parser name
+        filetype = "tlk", -- if filetype does not match the parser name
       }
     end
   }

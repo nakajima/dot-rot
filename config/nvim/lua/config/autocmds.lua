@@ -14,8 +14,8 @@ autocmd({'Bufread', 'Bufnewfile'}, {
 augroup("SetFileTypes", { clear = true })
 autocmd({'Bufread', 'Bufnewfile'}, {
   group = 'SetFileTypes',
-  pattern = {'*.swlox'},
-  command = 'setfiletype swlox',
+  pattern = {'*.tlk'},
+  command = 'setfiletype talktalk',
 })
 
 autocmd({'Bufread', 'Bufnewfile'}, {
