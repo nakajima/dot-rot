@@ -1,4 +1,1 @@
-"var" @keyword
-"print" @function
-(variable) @variable
-(number_literal) @number
+/home/nakajima/apps/talktalk/tree-sitter-talktalk/queries/highlights.scm
