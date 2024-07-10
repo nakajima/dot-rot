@@ -6,17 +6,18 @@ end
 
 return {
 	"neovim/nvim-lspconfig",
+	lazy = false,
 	config = function()
 		local lspconfig = require('lspconfig')
 
 		lspconfig.sourcekit.setup {
-			capabilities = {
-				workspace = {
-					didChangeWatchedFiles = {
-						dynamicRegistration = true,
-					},
-				},
-			},
+		}
+
+		lspconfig.clangd.setup {
+			on_attach =
+					function(client)
+						client.server_capabilities.semanticTokensProvider = nil
+					end,
 		}
 
 		lspconfig.tsserver.setup {
