@@ -8,37 +8,38 @@ wk.setup()
 --  visual_block_mode "x"
 --  term-mode         "t"
 --  command-mode      "c"
-
-wk.register({
-	["<leader>w"] = { "<cmd>w<CR>", "Save" },
-	["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find file..." },
-	["<c-k>"] = { "<cmd>wincmd k<CR>", "Move up buffer" },
-	["<c-j>"] = { "<cmd>wincmd j<CR>", "Move down buffer" },
-	["<c-h>"] = { "<cmd>wincmd h<CR>", "Move left buffer" },
-	["<c-l>"] = { "<cmd>wincmd l<CR>", "Move right buffer" },
-}, {
-	mode = "n",
-	noremap = true,
-	silent = true,
+wk.add({
+	{ "<c-h>", "<cmd>wincmd h<CR>", desc = "Move left buffer", remap = false, mode = "n" },
+	{ "<c-j>", "<cmd>wincmd j<CR>", desc = "Move down buffer", remap = false, mode = "n" },
+	{ "<c-k>", "<cmd>wincmd k<CR>", desc = "Move up buffer", remap = false, mode = "n" },
+	{ "<c-l>", "<cmd>wincmd l<CR>", desc = "Move right buffer", remap = false, mode = "n" },
+	{ "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions", remap = false, mode = "n" },
+	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file...", remap = false, mode = "n" },
+	{ "<leader>w", "<cmd>w<CR>", desc = "Save", remap = false, mode = "n" },
 })
 
+--wk.register({
+--	["<leader>w"] = { "<cmd>w<CR>", "Save" },
+--	["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find file..." },
+--	["<leader>ca"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
+--	["<c-k>"] = { "<cmd>wincmd k<CR>", "Move up buffer" },
+--	["<c-j>"] = { "<cmd>wincmd j<CR>", "Move down buffer" },
+--	["<c-h>"] = { "<cmd>wincmd h<CR>", "Move left buffer" },
+--	["<c-l>"] = { "<cmd>wincmd l<CR>", "Move right buffer" },
+--}, {
+--	mode = "n",
+--	noremap = true,
+--	silent = true,
+--})
+
 -- Insert mode
-wk.register({
-  ["jk"] = { "<ESC>", "Escape" },
-  ["<C-l>"] = { "<c-g>u<Esc>[s1z=`]a<c-g>u", "Correct last spelling mistake" },
-}, {
-  mode = "i",
-  noremap = true,
-  silent = true
+wk.add({
+	{"jk", "<ESC>", desc = "Escape", remap = false, mode = "i"},
+	{"<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", desc = "Correct last spelling mistake", remap = false, mode = "i"}
 })
 
 -- Visual mode
-wk.register({
-  [">"] = { ">gv", "Indent One Level" },
-  ["<"] = { "<gv", "Outdent One Level" },
-}, {
-  mode = "v",
-  noremap = true,
-  silent = true,
+wk.add({
+	{ ">", ">gv", desc = "Indent One Level", remap = false, mode = "v" },
+	{ "<", "<gv", desc = "Outdent One Level", remap = false, mode = "v" },
 })
-
