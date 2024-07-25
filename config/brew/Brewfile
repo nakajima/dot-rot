@@ -16,6 +16,7 @@ brew "lua-language-server"
 brew "ripgrep"
 brew "node"
 brew "swiftformat"
+brew "ninja"
 
 if OS.linux?
 brew "duplicity"

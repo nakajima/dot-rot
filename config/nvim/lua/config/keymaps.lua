@@ -14,23 +14,10 @@ wk.add({
 	{ "<c-k>", "<cmd>wincmd k<CR>", desc = "Move up buffer", remap = false, mode = "n" },
 	{ "<c-l>", "<cmd>wincmd l<CR>", desc = "Move right buffer", remap = false, mode = "n" },
 	{ "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions", remap = false, mode = "n" },
-	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file...", remap = false, mode = "n" },
 	{ "<leader>w", "<cmd>w<CR>", desc = "Save", remap = false, mode = "n" },
+	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file...", remap = false, mode = "n" },
+	{ "<leader>fe", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics...", remap = false, mode = "n" },
 })
-
---wk.register({
---	["<leader>w"] = { "<cmd>w<CR>", "Save" },
---	["<leader>ff"] = { "<cmd>Telescope find_files<CR>", "Find file..." },
---	["<leader>ca"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code actions" },
---	["<c-k>"] = { "<cmd>wincmd k<CR>", "Move up buffer" },
---	["<c-j>"] = { "<cmd>wincmd j<CR>", "Move down buffer" },
---	["<c-h>"] = { "<cmd>wincmd h<CR>", "Move left buffer" },
---	["<c-l>"] = { "<cmd>wincmd l<CR>", "Move right buffer" },
---}, {
---	mode = "n",
---	noremap = true,
---	silent = true,
---})
 
 -- Insert mode
 wk.add({

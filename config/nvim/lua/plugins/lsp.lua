@@ -11,6 +11,13 @@ return {
 		local lspconfig = require('lspconfig')
 
 		lspconfig.sourcekit.setup {
+			capabilities = {
+				workspace = {
+					didChangeWatchedFiles = {
+						dynamicRegistration = true,
+					},
+				},
+			},
 		}
 
 		lspconfig.clangd.setup {
