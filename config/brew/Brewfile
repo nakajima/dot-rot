@@ -4,7 +4,6 @@ tap "homebrew/services"
 
 # Homebrew
 brew "jq"
-brew "tailscale"
 brew "wget"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
