@@ -10,6 +10,18 @@ return {
 	config = function()
 		local lspconfig = require('lspconfig')
 
+		local configs = require "lspconfig.configs"
+		local util = require 'lspconfig.util'
+		configs["talktalk"] = {
+			default_config = {
+				cmd = { '/Users/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
+				root_dir = util.root_pattern("*.tlk"),
+				filetypes = { "talktalk" },
+			},
+		}
+
+		lspconfig.talktalk.setup {}
+
 		lspconfig.sourcekit.setup {
 			capabilities = {
 				workspace = {
@@ -81,6 +93,22 @@ return {
 			},
 		}
 
+		-- Create an event handler for the FileType autocommand
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = 'talktalk',
+			callback = function(args)
+				vim.lsp.start({
+					name = 'talktalk',
+					cmd = { '/Users/nakajima/apps/talktalk/.build/release/talk', 'lsp' },
+					-- Set the "root directory" to the parent directory of the file in the
+					-- current buffer (`args.buf`) that contains either a "setup.py" or a
+					-- "pyproject.toml" file. Files that share a root directory will reuse
+					-- the connection to the same LSP server.
+					root_dir = vim.fs.root(args.buf, { 'basic.tlk' }),
+				})
+			end,
+		})
+
 		vim.api.nvim_create_autocmd('LspAttach', {
 			desc = 'LSP Actions',
 			callback = function(args)
@@ -89,7 +117,7 @@ return {
 				wk.add({
 					mode = 'n',
 					silent = true,
-					{ "gd", vim.lsp.buf.definition, desc = "LSP go to definition" },
+					{ "gd", vim.lsp.buf.definition,   desc = "LSP go to definition" },
 					{ "[g", vim.diagnostic.goto_prev, desc = "Go to previous diagnostic" },
 					{ "g]", vim.diagnostic.goto_next, desc = "Go to next diagnostic" },
 				})

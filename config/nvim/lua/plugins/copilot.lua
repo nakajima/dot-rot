@@ -6,6 +6,7 @@ return {
 		lazy = false,
 		config = function()
 			require('copilot').setup({
+				enabled = false,
 				suggestion = { enabled = false },
 				panel = { enabled = false },
 			})
