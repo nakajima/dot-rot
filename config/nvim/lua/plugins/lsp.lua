@@ -99,7 +99,7 @@ return {
 			callback = function(args)
 				vim.lsp.start({
 					name = 'talktalk',
-					cmd = { '/Users/nakajima/apps/talktalk/.build/release/talk', 'lsp' },
+					cmd = { '/Users/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
 					-- Set the "root directory" to the parent directory of the file in the
 					-- current buffer (`args.buf`) that contains either a "setup.py" or a
 					-- "pyproject.toml" file. Files that share a root directory will reuse
