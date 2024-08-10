@@ -14,7 +14,7 @@ return {
 		local util = require 'lspconfig.util'
 		configs["talktalk"] = {
 			default_config = {
-				cmd = { '/Users/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
+				cmd = { '/home/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
 				root_dir = util.root_pattern("*.tlk"),
 				filetypes = { "talktalk" },
 			},

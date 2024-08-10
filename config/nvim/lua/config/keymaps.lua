@@ -17,6 +17,7 @@ wk.add({
 	{ "<leader>w", "<cmd>w<CR>", desc = "Save", remap = false, mode = "n" },
 	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file...", remap = false, mode = "n" },
 	{ "<leader>fe", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics...", remap = false, mode = "n" },
+	{ "<leader><esc>", "<cmd>Neotree toggle<CR>", desc = "Toggle sidebar", remap = false}
 })
 
 -- Insert mode
