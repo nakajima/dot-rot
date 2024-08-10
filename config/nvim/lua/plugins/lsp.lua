@@ -14,7 +14,7 @@ return {
 		local util = require 'lspconfig.util'
 		configs["talktalk"] = {
 			default_config = {
-				cmd = { '/home/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
+				cmd = { vim.fn.expand('$HOME/apps/talktalk/.build/debug/talk'), 'lsp' },
 				root_dir = util.root_pattern("*.tlk"),
 				filetypes = { "talktalk" },
 			},
