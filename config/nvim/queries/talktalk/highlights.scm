@@ -1,1 +1,0 @@
-/home/nakajima/apps/talktalk/tree-sitter-talktalk/queries/highlights.scm
