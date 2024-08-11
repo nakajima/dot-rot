@@ -1,4 +1,16 @@
 config/nvim/lazy-lock.json
+config/nvim/lua/plugins/statusline.lua
+local/bin/aarch64-swift-linux-musl-clang++.cfg
+local/bin/aarch64-swift-linux-musl-clang.cfg
+local/bin/clang-17
+local/bin/lldb-dap
+local/bin/llvm-ranlib
+local/bin/swift-format
+local/bin/swift-legacy-driver
+local/bin/swift-sdk
+local/bin/swiftc-legacy-driver
+local/bin/x86_64-swift-linux-musl-clang++.cfg
+local/bin/x86_64-swift-linux-musl-clang.cfg
 local/bin/clang
 local/bin/clang++
 local/bin/clang-15

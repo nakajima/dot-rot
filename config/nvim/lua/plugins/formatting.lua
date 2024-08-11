@@ -20,7 +20,7 @@ return {
         lua = { "stylua" },
         python = { "isort", "black" },
         swift = { "swiftformat" },
-				talktalk = { "tlk format" }
+				talktalk = { "talk format" }
       },
     })
   end,
