@@ -1,7 +1,9 @@
 return {
-	"vim-test/vim-test",
-	config = function()
-		vim.g['test#strategy'] = 'neovim'
-		vim.g['test#neovim#start_normal'] = '1'
-	end,
+  "nvim-neotest/neotest",
+  dependencies = {
+    "nvim-neotest/nvim-nio",
+    "nvim-lua/plenary.nvim",
+    "antoinemadec/FixCursorHold.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  }
 }
