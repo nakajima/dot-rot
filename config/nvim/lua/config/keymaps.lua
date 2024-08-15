@@ -1,6 +1,12 @@
 local wk = require("which-key")
 wk.setup()
 
+require('leap').create_default_mappings()
+-- Define equivalence classes for brackets and quotes, in addition to
+-- the default whitespace group.
+require('leap').opts.equivalence_classes = { ' \t\r\n', '([{', ')]}', '\'"`' }
+
+
 -- Modes
 --  normal-mode       "n"
 --  insert-mode       "i"
@@ -9,26 +15,26 @@ wk.setup()
 --  term-mode         "t"
 --  command-mode      "c"
 wk.add({
-	{ "<c-h>", "<cmd>wincmd h<CR>", desc = "Move left buffer", remap = false, mode = "n" },
-	{ "<c-j>", "<cmd>wincmd j<CR>", desc = "Move down buffer", remap = false, mode = "n" },
-	{ "<c-k>", "<cmd>wincmd k<CR>", desc = "Move up buffer", remap = false, mode = "n" },
-	{ "<c-l>", "<cmd>wincmd l<CR>", desc = "Move right buffer", remap = false, mode = "n" },
-	{ "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions", remap = false, mode = "n" },
-	{ "<leader>w", "<cmd>w<CR>", desc = "Save", remap = false, mode = "n" },
-	{ "<leader>fe", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics...", remap = false, mode = "n" },
-	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file...", remap = false, mode = "n" },
-	{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", remap = false, mode = "n" },
-	{ "<leader><esc>", "<cmd>Neotree toggle<CR>", desc = "Toggle sidebar", remap = false}
+	{ "<c-h>",         "<cmd>wincmd h<CR>",                      desc = "Move left buffer",  remap = false, mode = "n" },
+	{ "<c-j>",         "<cmd>wincmd j<CR>",                      desc = "Move down buffer",  remap = false, mode = "n" },
+	{ "<c-k>",         "<cmd>wincmd k<CR>",                      desc = "Move up buffer",    remap = false, mode = "n" },
+	{ "<c-l>",         "<cmd>wincmd l<CR>",                      desc = "Move right buffer", remap = false, mode = "n" },
+	{ "<leader>ca",    "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions",      remap = false, mode = "n" },
+	{ "<leader>w",     "<cmd>w<CR>",                             desc = "Save",              remap = false, mode = "n" },
+	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",         desc = "Diagnostics...",    remap = false, mode = "n" },
+	{ "<leader>ff",    "<cmd>Telescope find_files<CR>",          desc = "Find file...",      remap = false, mode = "n" },
+	{ "<leader>fg",    "<cmd>Telescope live_grep<CR>",           desc = "Live grep",         remap = false, mode = "n" },
+	{ "<leader><esc>", "<cmd>Neotree toggle<CR>",                desc = "Toggle sidebar",    remap = false }
 })
 
 -- Insert mode
 wk.add({
-	{"jk", "<ESC>", desc = "Escape", remap = false, mode = "i"},
-	{"<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", desc = "Correct last spelling mistake", remap = false, mode = "i"}
+	{ "jk",    "<ESC>",                     desc = "Escape",                        remap = false, mode = "i" },
+	{ "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", desc = "Correct last spelling mistake", remap = false, mode = "i" }
 })
 
 -- Visual mode
 wk.add({
-	{ ">", ">gv", desc = "Indent One Level", remap = false, mode = "v" },
+	{ ">", ">gv", desc = "Indent One Level",  remap = false, mode = "v" },
 	{ "<", "<gv", desc = "Outdent One Level", remap = false, mode = "v" },
 })
