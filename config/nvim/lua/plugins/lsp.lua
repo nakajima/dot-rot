@@ -20,8 +20,6 @@ return {
 			},
 		}
 
-		lspconfig.talktalk.setup {}
-
 		lspconfig.sourcekit.setup {
 			capabilities = {
 				workspace = {
