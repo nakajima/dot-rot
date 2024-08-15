@@ -20,6 +20,8 @@ return {
 			},
 		}
 
+		lspconfig.yamlls.setup {}
+
 		lspconfig.sourcekit.setup {
 			capabilities = {
 				workspace = {
