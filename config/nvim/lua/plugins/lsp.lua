@@ -20,6 +20,22 @@ return {
 			},
 		}
 
+		-- Create an event handler for the FileType autocommand
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = 'talktalk',
+			callback = function(args)
+				vim.lsp.start({
+					name = 'talktalk',
+					cmd = { vim.fn.expand('$HOME/apps/talktalk/.build/debug/talk'), 'lsp' },
+					-- Set the "root directory" to the parent directory of the file in the
+					-- current buffer (`args.buf`) that contains either a "setup.py" or a
+					-- "pyproject.toml" file. Files that share a root directory will reuse
+					-- the connection to the same LSP server.
+					root_dir = vim.fs.root(args.buf, { '*.tlk' }),
+				})
+			end,
+		})
+
 		lspconfig.yamlls.setup {}
 
 		lspconfig.sourcekit.setup {
@@ -92,22 +108,6 @@ return {
 				},
 			},
 		}
-
-		-- Create an event handler for the FileType autocommand
-		vim.api.nvim_create_autocmd('FileType', {
-			pattern = 'talktalk',
-			callback = function(args)
-				vim.lsp.start({
-					name = 'talktalk',
-					cmd = { '/Users/nakajima/apps/talktalk/.build/debug/talk', 'lsp' },
-					-- Set the "root directory" to the parent directory of the file in the
-					-- current buffer (`args.buf`) that contains either a "setup.py" or a
-					-- "pyproject.toml" file. Files that share a root directory will reuse
-					-- the connection to the same LSP server.
-					root_dir = vim.fs.root(args.buf, { 'basic.tlk' }),
-				})
-			end,
-		})
 
 		vim.api.nvim_create_autocmd('LspAttach', {
 			desc = 'LSP Actions',
