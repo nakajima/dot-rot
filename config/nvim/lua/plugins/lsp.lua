@@ -22,6 +22,8 @@ return {
 
 		lspconfig.yamlls.setup {}
 
+		lspconfig.asm_lsp.setup {}
+
 		lspconfig.sourcekit.setup {
 			capabilities = {
 				workspace = {
