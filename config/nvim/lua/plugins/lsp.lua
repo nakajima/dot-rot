@@ -15,7 +15,7 @@ return {
 		configs["talktalk"] = {
 			default_config = {
 				cmd = { vim.fn.expand('$HOME/apps/talktalk/.build/debug/talk'), 'lsp' },
-				root_dir = util.root_pattern("*.tlk"),
+				root_dir = util.root_pattern("*.talk"),
 				filetypes = { "talktalk" },
 			},
 		}
