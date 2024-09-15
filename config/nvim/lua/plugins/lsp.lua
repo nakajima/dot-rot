@@ -31,7 +31,7 @@ return {
 					-- current buffer (`args.buf`) that contains either a "setup.py" or a
 					-- "pyproject.toml" file. Files that share a root directory will reuse
 					-- the connection to the same LSP server.
-					root_dir = vim.fs.root(args.buf, { '*.tlk' }),
+					root_dir = vim.fs.root(args.buf, { '*.talk' }),
 				})
 			end,
 		})
