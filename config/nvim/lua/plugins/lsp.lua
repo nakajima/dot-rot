@@ -36,8 +36,9 @@ return {
 			end,
 		})
 
+		lspconfig.rust_analyzer.setup {}
+		lspconfig.ruby_lsp.setup {}
 		lspconfig.yamlls.setup {}
-
 		lspconfig.asm_lsp.setup {}
 
 		lspconfig.sourcekit.setup {
@@ -57,7 +58,7 @@ return {
 					end,
 		}
 
-		lspconfig.tsserver.setup {
+		lspconfig.ts_ls.setup {
 			capabilities = {
 				textDocument = {
 					completion = {
