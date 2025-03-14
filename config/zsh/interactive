@@ -17,6 +17,7 @@ fi
 if [ -d "$HOMEBREW_PREFIX/share/zsh/site-functions" ]; then
 	FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH"
 fi
+
 if [ -d "$XDG_CACHE_HOME" ]; then
 	autoload -Uz compinit
 	mkdir -p "$XDG_CACHE_HOME/zsh"
@@ -51,3 +52,6 @@ fi
 # aliases
 alias fs="swiftformat ."
 alias dotrot="$EDITOR $HOME/apps/dot-rot"
+
+# we like a skinny cursor
+echo -ne '\e[5 q'
