@@ -36,6 +36,11 @@ if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
 	bindkey '\t\t' autosuggest-accept
 fi
 
+if [ -d "$HOME/.nix-profile/share/zsh-autosuggestions" ]; then
+	source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+	bindkey '\t\t' autosuggest-accept
+fi
+
 if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
 	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
@@ -54,4 +59,4 @@ alias fs="swiftformat ."
 alias dotrot="$EDITOR $HOME/apps/dot-rot"
 
 # we like a skinny cursor
-echo -ne '\e[5 q'
+precmd() { echo -ne '\e[5 q' }
