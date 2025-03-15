@@ -9,4 +9,6 @@ nix profile install \
   nixpkgs#zsh-syntax-highlighting \
   nixpkgs#atuin \
   nixpkgs#starship \
-  nixpkgs#lua-language-server
+  nixpkgs#lua-language-server \
+	nixpkgs#clang \
+	nixpkgs#sourcekit-lsp
