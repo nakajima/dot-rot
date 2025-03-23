@@ -10,5 +10,14 @@ nix profile install \
   nixpkgs#atuin \
   nixpkgs#starship \
   nixpkgs#lua-language-server \
+	nixpkgs#ncurses.dev \
+	nixpkgs#openssl.dev \
+	nixpkgs#linuxHeaders \
+	nixpkgs#libressl.dev --priority 6 \
+	nixpkgs#libz.dev \
+	nixpkgs#screen \
+	nixpkgs#tree \
+	nixpkgs#llvm \
 	nixpkgs#clang \
-	nixpkgs#sourcekit-lsp
+	nixpkgs#clang-tools \
+	nixpkgs#lld

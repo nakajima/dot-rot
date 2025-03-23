@@ -31,7 +31,7 @@ export LESSHISTFILE="-"
 
 # colors
 export CLICOLOR=1
-export GREP_COLOR='1;32'
+export GREP_COLORS='mt=1;32'
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -52,3 +52,7 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 
 export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/Brewfile"
+
+if [ -d "$HOME/.nix-profile/include/" ]; then
+	export CPATH="$CPATH:$HOME/.nix-profile/include/"	
+fi
