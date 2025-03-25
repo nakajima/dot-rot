@@ -16,6 +16,7 @@ brew "ripgrep"
 brew "node"
 brew "swiftformat"
 brew "ninja"
+brew "python@3.13"
 
 if OS.linux?
 brew "duplicity"
@@ -24,23 +25,22 @@ end
 if OS.mac?
 brew "swiftformat"
 brew "direnv"
-brew "finestructure/tap/arena"
 brew "mas"
 brew "tidy-html5"
 brew "cmake"
-brew "iterm2"
 
 # Cask
-cask "ngrok"
 cask "raycast"
 cask "visual-studio-code"
-cask "docker"
 cask "discord"
 cask "slack"
 cask "spotify"
 cask "iina"
-cask "swiftformat-for-xcode"
-cask "utm"
+cask "ghostty"
+cask "kicad"
+cask "google-chrome"
+cask "obsidian"
+cask "cursor"
 
 # Mac App Store
 mas "iA Writer", id: 775737590
@@ -49,4 +49,5 @@ mas "1Password 7", id: 1333542190
 mas "SQLiteFlow", id: 1378587993
 mas "Ivory", id: 6444602274
 mas "Pixelmator Pro", id: 1289583905
+mas "Shapr 3D CAD modeling", id: 1091675654
 end
