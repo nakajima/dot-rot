@@ -2,6 +2,17 @@
   boot.kernelModules = [ "usb_storage" ];
   boot.blacklistedKernelModules = [ "uas" ];
 
+  # Cool it.
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      zlib
+      openssl
+      curl
+      # etc
+    ];
+  };
+
   nix.settings.experimental-features = "nix-command flakes";
 
   programs.zsh.enable = true;
