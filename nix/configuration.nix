@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+  boot.kernelModules = [ "usb_storage" "uas" ];
+
   nix.settings.experimental-features = "nix-command flakes";
 
   programs.zsh.enable = true;
