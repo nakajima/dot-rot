@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  boot.kernelModules = [ "usb_storage" "uas" ];
+  boot.kernelModules = [ "usb_storage" ];
 
   nix.settings.experimental-features = "nix-command flakes";
 
