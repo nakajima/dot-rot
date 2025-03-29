@@ -1,4 +1,13 @@
 { pkgs, ... }: {
+  environment.systemPackages = with pkgs; [ mergerfs ];
+
+  fileSystems."/storage" = {
+    fsType = "fuse.mergerfs";
+    device = "/mnt/disks/*";
+    options =
+      [ "cache.files=partial" "dropcacheonclose=true" "category.create=mfs" ];
+  };
+
   # Cool it.
   programs.nix-ld = {
     enable = true;
@@ -26,6 +35,4 @@
   nixpkgs.config.allowUnfree = true;
 
   services.tailscale.enable = true;
-
-  environment.systemPackages = with pkgs; [ wget ];
 }
