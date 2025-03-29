@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   boot.kernelModules = [ "usb_storage" ];
+  boot.blacklistedKernelModules = [ "uas" ];
 
   nix.settings.experimental-features = "nix-command flakes";
 
