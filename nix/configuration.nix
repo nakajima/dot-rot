@@ -1,14 +1,5 @@
 { config, pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ mergerfs ];
-
   networking.hostName = "nopefs-dev";
-
-  fileSystems."/storage" = {
-    fsType = "fuse.mergerfs";
-    device = "/mnt/disks/*";
-    options =
-      [ "cache.files=partial" "dropcacheonclose=true" "category.create=mfs" ];
-  };
 
   # Cool it.
   programs.nix-ld = {
