@@ -20,4 +20,5 @@ nix profile install \
 	nixpkgs#lld \
 	nixpkgs#emacs \
 	github:nix-community/nixd \
+	nixpkgs#nixfmt \
 	nixpkgs#gh

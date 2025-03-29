@@ -70,6 +70,8 @@ return {
 			},
 		}
 
+		lspconfig.nixd.setup{}
+
 		lspconfig.dockerls.setup {
 			settings = {
 				docker = {
