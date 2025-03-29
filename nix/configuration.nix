@@ -1,7 +1,4 @@
 { pkgs, ... }: {
-  boot.kernelModules = [ "usb_storage" ];
-  boot.blacklistedKernelModules = [ "uas" ];
-
   # Cool it.
   programs.nix-ld = {
     enable = true;
