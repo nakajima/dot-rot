@@ -19,4 +19,5 @@ nix profile install \
 	nixpkgs#clang-tools \
 	nixpkgs#lld \
 	nixpkgs#emacs \
-	github:nix-community/nixd
+	github:nix-community/nixd \
+	nixpkgs#gh
