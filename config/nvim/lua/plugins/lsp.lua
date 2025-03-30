@@ -123,8 +123,9 @@ return {
 					mode = 'n',
 					silent = true,
 					{ "gd", vim.lsp.buf.definition,   desc = "LSP go to definition" },
-					{ "[g", vim.diagnostic.goto_prev, desc = "Go to previous diagnostic" },
+					{ "g[", vim.diagnostic.goto_prev, desc = "Go to previous diagnostic" },
 					{ "g]", vim.diagnostic.goto_next, desc = "Go to next diagnostic" },
+					{ "<leader>h", vim.lsp.buf.hover, desc = "Document symbol" }
 				})
 			end,
 		})
