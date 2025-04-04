@@ -21,4 +21,5 @@ nix profile install \
 	nixpkgs#emacs \
 	github:nix-community/nixd \
 	nixpkgs#nixfmt \
-	nixpkgs#gh
+	nixpkgs#gh \
+	nixpkgs#yaml-language-server
