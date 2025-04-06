@@ -1,0 +1,6 @@
+#! /bin/bash
+
+pushd $HOME/apps/dot-rot/
+$EDITOR $HOME/apps/dot-rot
+popd
+
