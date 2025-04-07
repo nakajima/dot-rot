@@ -15,10 +15,9 @@ wk.add({
 	{ "<c-l>",         "<cmd>wincmd l<CR>",                      desc = "Move right buffer", remap = false, mode = "n" },
 	{ "<leader>ca",    "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions",      remap = false, mode = "n" },
 	{ "<leader>w",     "<cmd>w<CR>",                             desc = "Save",              remap = false, mode = "n" },
-	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",         desc = "Diagnostics...",    remap = false, mode = "n" },
 	{ "<leader>ff",    "<cmd>Telescope find_files<CR>",          desc = "Find file...",      remap = false, mode = "n" },
-	{ "<leader>fg",    "<cmd>Telescope live_grep<CR>",           desc = "Live grep",         remap = false, mode = "n" },
-	{ "<leader><esc>", "<cmd>Neotree toggle<CR>",                desc = "Toggle sidebar",    remap = false }
+	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",         desc = "Diagnostics...",    remap = false, mode = "n" },
+	{ "<leader><esc>", function() require("snacks").explorer() end, desc = "Toggle sidebar",    remap = false }
 })
 
 -- Insert mode
