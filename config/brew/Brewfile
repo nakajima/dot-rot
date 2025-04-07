@@ -1,6 +1,7 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "probe-rs/probe-rs"
 
 # Homebrew
 brew "jq"
@@ -28,6 +29,7 @@ brew "direnv"
 brew "mas"
 brew "tidy-html5"
 brew "cmake"
+brew "probe-rs-tools"
 
 # Cask
 cask "raycast"
@@ -41,6 +43,7 @@ cask "kicad"
 cask "google-chrome"
 cask "obsidian"
 cask "cursor"
+cask "chatgpt"
 
 # Mac App Store
 mas "iA Writer", id: 775737590

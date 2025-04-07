@@ -36,7 +36,7 @@ return {
 			end,
 		})
 
-		lspconfig.rust_analyzer.setup {}
+		--lspconfig.rust_analyzer.setup {}
 		lspconfig.ruby_lsp.setup {}
 		lspconfig.yamlls.setup {}
 		lspconfig.asm_lsp.setup {}
