@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 set -euo pipefail
 
@@ -29,6 +29,7 @@ mkdir -p "$HOME/.local"
 dotlink "zprofile"
 dotlink "zshrc"
 dotlink "sqliterc"
+dotlink "tmux.conf"
 dotlink "local/bin"
 
 for src in "$dotfiles/config"/*; do

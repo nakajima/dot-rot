@@ -11,13 +11,15 @@ nix profile install \
   nixpkgs#starship \
   nixpkgs#lua-language-server \
 	nixpkgs#ncurses.dev \
-	nixpkgs#openssl.dev \
-	nixpkgs#linuxHeaders \
-	nixpkgs#libressl.dev --priority 6 \
 	nixpkgs#libz.dev \
 	nixpkgs#screen \
 	nixpkgs#tree \
 	nixpkgs#llvm \
 	nixpkgs#clang \
 	nixpkgs#clang-tools \
-	nixpkgs#lld
+	nixpkgs#lld \
+	nixpkgs#emacs \
+	github:nix-community/nixd \
+	nixpkgs#nixfmt \
+	nixpkgs#gh \
+	nixpkgs#yaml-language-server

@@ -56,7 +56,6 @@ fi
 
 # aliases
 alias fs="swiftformat ."
-alias dotrot="$EDITOR $HOME/apps/dot-rot"
 
 # we like a skinny cursor
 precmd() { echo -ne '\e[5 q' }
