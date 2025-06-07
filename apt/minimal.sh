@@ -1,3 +1,4 @@
+#! /usr/bin/bash
 sudo apt update
 sudo apt upgrade -y
 sudo apt install ripgrep zsh clang gh cmake build-essential -y
