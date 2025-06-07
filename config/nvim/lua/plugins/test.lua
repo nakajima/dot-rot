@@ -10,7 +10,8 @@ return {
 	config = function()
 		require("neotest").setup({
 			adapters = {
-				require("neotest-minitest")
+				require("neotest-minitest"),
+				require('rustaceanvim.neotest')
 			},
 		})
 	end

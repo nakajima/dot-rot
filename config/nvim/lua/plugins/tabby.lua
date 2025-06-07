@@ -10,7 +10,7 @@ return {
 		wk.add(
 			{
 				mode = "n",
-				{ "<leader>t", "<cmd>tabnew<CR>",      desc = "New tab",      remap = false, mode = "n" },
+				{ "<leader-shift>T", "<cmd>tabnew<CR>",      desc = "New tab",      remap = false, mode = "n" },
 				{ "<C-[>",     "<cmd>tabprevious<CR>", desc = "Previous tab", remap = false },
 				{ "<C-]>",     "<cmd>tabnext<CR>",     desc = "Next tab",     remap = false }
 			}
