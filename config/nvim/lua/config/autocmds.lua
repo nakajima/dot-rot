@@ -12,7 +12,7 @@ autocmd({'Bufread', 'Bufnewfile'}, {
 augroup("SetFileTypes", { clear = true })
 autocmd({'Bufread', 'Bufnewfile'}, {
   group = 'SetFileTypes',
-  pattern = {'*.talk'},
+  pattern = {'*.tlk'},
   command = 'setfiletype talktalk',
 })
 
