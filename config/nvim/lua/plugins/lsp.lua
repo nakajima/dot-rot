@@ -15,6 +15,7 @@ return {
 		configs["talktalk"] = {
 			default_config = {
 				cmd = { vim.fn.expand('$HOME/apps/talk-rs/target/debug/talk'), 'lsp' },
+				cmd_env = { RUST_BACKTRACE = "1" },
 				root_dir = util.root_pattern("*.tlk"),
 				filetypes = { "talktalk" },
 			},
@@ -27,6 +28,7 @@ return {
 				vim.lsp.start({
 					name = 'talktalk',
 					cmd = { vim.fn.expand('$HOME/apps/talk-rs/target/debug/talk'), 'lsp' },
+					cmd_env = { RUST_BACKTRACE=1 },
 					-- Set the "root directory" to the parent directory of the file in the
 					-- current buffer (`args.buf`) that contains either a "setup.py" or a
 					-- "pyproject.toml" file. Files that share a root directory will reuse

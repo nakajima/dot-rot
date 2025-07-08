@@ -9,16 +9,17 @@ wk.setup()
 --  term-mode         "t"
 --  command-mode      "c"
 wk.add({
-	{ "<c-h>",         "<cmd>wincmd h<CR>",                      desc = "Move left buffer",  remap = false, mode = "n" },
-	{ "<c-j>",         "<cmd>wincmd j<CR>",                      desc = "Move down buffer",  remap = false, mode = "n" },
-	{ "<c-k>",         "<cmd>wincmd k<CR>",                      desc = "Move up buffer",    remap = false, mode = "n" },
-	{ "<c-l>",         "<cmd>wincmd l<CR>",                      desc = "Move right buffer", remap = false, mode = "n" },
-	{ "<leader>ca",    "<cmd>lua vim.lsp.buf.code_action()<CR>", desc = "Code actions",      remap = false, mode = "n" },
-	{ "<leader>ff",    "<cmd>Telescope find_files<CR>",          desc = "Find file...",      remap = false, mode = "n" },
-	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",         desc = "Diagnostics...",    remap = false, mode = "n" },
-	{ "<leader><esc>", function() require("snacks").explorer() end, desc = "Toggle sidebar",    remap = false },
-	{ "<leader>t", 	 "<cmd>Neotest run<CR>",                   desc = "Run test", remap = true, mode = "n" },
-	{ "<M-r>", function() require("neotest").run.run(vim.fn.expand("%")) end,                   desc = "Run test", remap = false, mode = "n" }
+	{ "<c-h>",         "<cmd>wincmd h<CR>",                                           desc = "Move left buffer",  remap = false, mode = "n" },
+	{ "<c-j>",         "<cmd>wincmd j<CR>",                                           desc = "Move down buffer",  remap = false, mode = "n" },
+	{ "<c-k>",         "<cmd>wincmd k<CR>",                                           desc = "Move up buffer",    remap = false, mode = "n" },
+	{ "<c-l>",         "<cmd>wincmd l<CR>",                                           desc = "Move right buffer", remap = false, mode = "n" },
+	{ "<leader>ca",    "<cmd>lua vim.lsp.buf.code_action()<CR>",                      desc = "Code actions",      remap = false, mode = "n" },
+	{ "<leader>ff",    "<cmd>Telescope find_files<CR>",                               desc = "Find file...",      remap = false, mode = "n" },
+	{ "<leader>fg",    "<cmd>Telescope live_grep<CR>",                               desc = "Find file...",      remap = false, mode = "n" },
+	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",                              desc = "Diagnostics...",    remap = false, mode = "n" },
+	{ "<leader><esc>", function() require("snacks").explorer() end,                   desc = "Toggle sidebar",    remap = false },
+	{ "<leader>t",     "<cmd>Neotest run<CR>",                                        desc = "Run test",          remap = true,  mode = "n" },
+	{ "<M-r>",         function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run test",          remap = false, mode = "n" }
 })
 
 -- Insert mode
