@@ -15,10 +15,4 @@ opt.filetype = 'on'
 
 vim.cmd("nnoremap <leader>ff <cmd>Telescope find_files<cr>")
 vim.cmd("nnoremap <cmd>Fs <cmd>!swiftformat .<cr>")
-vim.cmd("nnoremap <cmd>Q <cmd>qa<cr>")
-
-vim.api.nvim_create_user_command('Format', function()
-	vim.lsp.buf.format({ async = true })
-end, {})
-
 

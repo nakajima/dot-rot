@@ -1,5 +1,6 @@
 # There's no brew on arm linux
 nix profile install \
+	nixpkgs#tmux \
   nixpkgs#jq \
   nixpkgs#wget \
   nixpkgs#neovim \

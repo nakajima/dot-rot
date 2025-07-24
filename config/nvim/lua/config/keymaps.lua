@@ -15,7 +15,7 @@ wk.add({
 	{ "<c-l>",         "<cmd>wincmd l<CR>",                                           desc = "Move right buffer", remap = false, mode = "n" },
 	{ "<leader>ca",    "<cmd>lua vim.lsp.buf.code_action()<CR>",                      desc = "Code actions",      remap = false, mode = "n" },
 	{ "<leader>ff",    "<cmd>Telescope find_files<CR>",                               desc = "Find file...",      remap = false, mode = "n" },
-	{ "<leader>fg",    "<cmd>Telescope live_grep<CR>",                               desc = "Find file...",      remap = false, mode = "n" },
+	{ "<leader>fg",    "<cmd>Telescope live_grep<CR>",                                desc = "Find file...",      remap = false, mode = "n" },
 	{ "<leader>fe",    "<cmd>Telescope diagnostics<CR>",                              desc = "Diagnostics...",    remap = false, mode = "n" },
 	{ "<leader><esc>", function() require("snacks").explorer() end,                   desc = "Toggle sidebar",    remap = false },
 	{ "<leader>t",     "<cmd>Neotest run<CR>",                                        desc = "Run test",          remap = true,  mode = "n" },
@@ -33,3 +33,21 @@ wk.add({
 	{ ">", ">gv", desc = "Indent One Level",  remap = false, mode = "v" },
 	{ "<", "<gv", desc = "Outdent One Level", remap = false, mode = "v" },
 })
+
+vim.api.nvim_create_user_command("Q", function()
+	vim.cmd("wqa!")
+end, {})
+
+vim.api.nvim_create_user_command("QQ", function()
+	vim.cmd("qa!")
+end, {})
+
+vim.api.nvim_create_user_command("Notifications", function()
+	Snacks.notifier.show_history()
+end, {})
+
+vim.api.nvim_create_user_command('Format', function()
+	vim.lsp.buf.format({ async = true })
+end, {})
+
+
