@@ -4,12 +4,18 @@ local function sklsp_register_cap()
 	return capabilities
 end
 
+local format_sync_grp = vim.api.nvim_create_augroup("RustaceanFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+	buffer = bufnr,
+	callback = function() vim.lsp.buf.format() end,
+	group = format_sync_grp,
+})
+
 return {
 	"neovim/nvim-lspconfig",
 	lazy = false,
 	config = function()
 		local lspconfig = require('lspconfig')
-
 		local configs = require "lspconfig.configs"
 		local util = require 'lspconfig.util'
 		configs["talktalk"] = {
@@ -28,7 +34,7 @@ return {
 				vim.lsp.start({
 					name = 'talktalk',
 					cmd = { vim.fn.expand('$HOME/apps/talk/target/debug/talk'), 'lsp' },
-					cmd_env = { RUST_BACKTRACE=1 },
+					cmd_env = { RUST_BACKTRACE = 1 },
 					-- Set the "root directory" to the parent directory of the file in the
 					-- current buffer (`args.buf`) that contains either a "setup.py" or a
 					-- "pyproject.toml" file. Files that share a root directory will reuse
@@ -42,6 +48,7 @@ return {
 		lspconfig.ruby_lsp.setup {}
 		lspconfig.yamlls.setup {}
 		lspconfig.asm_lsp.setup {}
+		lspconfig.hls.setup {}
 
 		lspconfig.sourcekit.setup {
 			capabilities = {
@@ -72,7 +79,7 @@ return {
 			},
 		}
 
-		lspconfig.nixd.setup{}
+		lspconfig.nixd.setup {}
 
 		lspconfig.dockerls.setup {
 			settings = {
@@ -124,10 +131,10 @@ return {
 				wk.add({
 					mode = 'n',
 					silent = true,
-					{ "gd", vim.lsp.buf.definition,   desc = "LSP go to definition" },
-					{ "g[", vim.diagnostic.goto_prev, desc = "Go to previous diagnostic" },
-					{ "g]", vim.diagnostic.goto_next, desc = "Go to next diagnostic" },
-					{ "<leader>h", vim.lsp.buf.hover, desc = "Document symbol" }
+					{ "gd",        vim.lsp.buf.definition,   desc = "LSP go to definition" },
+					{ "g[",        vim.diagnostic.goto_prev, desc = "Go to previous diagnostic" },
+					{ "g]",        vim.diagnostic.goto_next, desc = "Go to next diagnostic" },
+					{ "<leader>h", vim.lsp.buf.hover,        desc = "Document symbol" }
 				})
 			end,
 		})

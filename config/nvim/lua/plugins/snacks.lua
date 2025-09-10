@@ -9,7 +9,7 @@ return {
 		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
-		picker = { enabled = true, layout = { layout = { width = 24 } } },
+		picker = { enabled = true, layout = { layout = { width = 0.2 } } },
 		notifier = {
 			enabled = true,
 			style = "fancy"

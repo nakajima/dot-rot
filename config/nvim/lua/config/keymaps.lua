@@ -35,11 +35,11 @@ wk.add({
 })
 
 vim.api.nvim_create_user_command("Q", function()
-	vim.cmd("wqa!")
+	vim.cmd("qa!")
 end, {})
 
-vim.api.nvim_create_user_command("QQ", function()
-	vim.cmd("qa!")
+vim.api.nvim_create_user_command("QW", function()
+	vim.cmd("wqa!")
 end, {})
 
 vim.api.nvim_create_user_command("Notifications", function()
