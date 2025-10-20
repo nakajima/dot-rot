@@ -1,5 +1,6 @@
 config/nvim/lazy-lock.json
 *.log
+config/go
 armlinux/lua-language-server
 local/bin/aarch64-swift-linux-musl-clang++.cfg
 local/bin/aarch64-swift-linux-musl-clang.cfg
