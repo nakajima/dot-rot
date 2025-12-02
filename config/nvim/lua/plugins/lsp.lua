@@ -15,7 +15,6 @@ return {
 	"neovim/nvim-lspconfig",
 	lazy = false,
 	config = function()
-		local lspconfig = require('lspconfig')
 		local configs = require "lspconfig.configs"
 		local util = require 'lspconfig.util'
 		configs["talktalk"] = {
@@ -44,13 +43,16 @@ return {
 			end,
 		})
 
+		-- we're using rustaceanvim, so we skip this one
 		--lspconfig.rust_analyzer.setup {}
-		lspconfig.ruby_lsp.setup {}
-		lspconfig.yamlls.setup {}
-		lspconfig.asm_lsp.setup {}
-		lspconfig.hls.setup {}
 
-		lspconfig.sourcekit.setup {
+		vim.lsp.enable("ruby_lsp")
+		vim.lsp.enable("yamlls")
+		vim.lsp.enable("asm_lsp")
+		vim.lsp.enable("hls.setup")
+		vim.lsp.enable("gopls.setup")
+
+		vim.lsp.config("sourcekit", {
 			capabilities = {
 				workspace = {
 					didChangeWatchedFiles = {
@@ -58,16 +60,18 @@ return {
 					},
 				},
 			},
-		}
+		})
+		vim.lsp.enable("sourcekit")
 
-		lspconfig.clangd.setup {
+		vim.lsp.config("clangd",  {
 			on_attach =
 					function(client)
 						client.server_capabilities.semanticTokensProvider = nil
 					end,
-		}
+		})
+		vim.lsp.enable("clangd")
 
-		lspconfig.ts_ls.setup {
+		vim.lsp.config("tl_ls", {
 			capabilities = {
 				textDocument = {
 					completion = {
@@ -77,27 +81,10 @@ return {
 					},
 				},
 			},
-		}
+		})
+		vim.lsp.enable("tl_ls")
 
-		lspconfig.nixd.setup {}
-
-		lspconfig.dockerls.setup {
-			settings = {
-				docker = {
-					workspaceFolder = {
-						"docker-compose.yml",
-						"Dockerfile",
-					},
-					languageserver = {
-						formatter = {
-							ignoreMultilineInstructions = true,
-						},
-					},
-				},
-			},
-		}
-
-		lspconfig.lua_ls.setup {
+		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
 					runtime = {
@@ -121,7 +108,8 @@ return {
 					},
 				},
 			},
-		}
+		})
+		vim.lsp.enable("lua_ls")
 
 		vim.api.nvim_create_autocmd('LspAttach', {
 			desc = 'LSP Actions',
