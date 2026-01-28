@@ -34,6 +34,10 @@ wk.add({
 	{ "<", "<gv", desc = "Outdent One Level", remap = false, mode = "v" },
 })
 
+vim.api.nvim_create_user_command("Rename", function()
+	vim.lsp.buf.rename()
+end, {})
+
 vim.api.nvim_create_user_command("Q", function()
 	vim.cmd("qa!")
 end, {})
@@ -49,5 +53,3 @@ end, {})
 vim.api.nvim_create_user_command('Format', function()
 	vim.lsp.buf.format({ async = true })
 end, {})
-
-
