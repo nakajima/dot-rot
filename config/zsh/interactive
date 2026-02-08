@@ -2,12 +2,12 @@
 source ~/.config/sh/interactive
 
 if [ -x "$(command -v starship)" ]; then
-	eval "$(starship init zsh)"
+        eval "$(starship init zsh)"
 fi
 
 if [ -x "$HOME/.atuin/bin/atuin" ]; then
-	PATH="$PATH:$HOME/.atuin/bin"
-	eval "$($HOME/.atuin/bin/atuin init zsh)"
+        PATH="$PATH:$HOME/.atuin/bin"
+        eval "$($HOME/.atuin/bin/atuin init zsh)"
 fi
 
 if [ -x "$(command -v atuin)" ]; then
@@ -15,17 +15,17 @@ if [ -x "$(command -v atuin)" ]; then
 fi
 
 if [ -d "/usr/share/zsh/site-functions" ]; then
-	FPATH="/usr/share/zsh/site-functions:$FPATH"
+        FPATH="/usr/share/zsh/site-functions:$FPATH"
 fi
 
 if [ -d "$HOMEBREW_PREFIX/share/zsh/site-functions" ]; then
-	FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH"
+        FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH"
 fi
 
 if [ -d "$XDG_CACHE_HOME" ]; then
-	autoload -Uz compinit
-	mkdir -p "$XDG_CACHE_HOME/zsh"
-	compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+        autoload -Uz compinit
+        mkdir -p "$XDG_CACHE_HOME/zsh"
+        compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 fi
 
 # force emacs bindings
@@ -35,27 +35,36 @@ bindkey -e
 autoload -U select-word-style
 select-word-style bash
 
+if [ -d "/usr/share/zsh-autosuggestions" ]; then
+        source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+        bindkey '\t\t' autosuggest-accept
+fi
+
 if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
-	source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-	bindkey '\t\t' autosuggest-accept
+        source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+        bindkey '\t\t' autosuggest-accept
 fi
 
 if [ -d "$HOME/.nix-profile/share/zsh-autosuggestions" ]; then
-	source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-	bindkey '\t\t' autosuggest-accept
+        source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+        bindkey '\t\t' autosuggest-accept
+fi
+
+if [ -d "/usr/share/zsh-syntax-highlighting" ]; then
+        source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
-	source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+        source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 if [ -d "$HOME/.local/share/swiftly" ]; then
-	source "$HOME/.local/share/swiftly/env.sh"
+        source "$HOME/.local/share/swiftly/env.sh"
 fi
 
 # direnv
 if [ -x "$(command -v direnv)" ]; then
-	eval "$(direnv hook zsh)"
+        eval "$(direnv hook zsh)"
 fi
 
 # aliases
