@@ -1,12 +1,18 @@
 #! /usr/bin/bash
 sudo apt update
 sudo apt upgrade -y
-sudo apt install ripgrep zsh clang gh cmake build-essential -y
 
-# build neovim because the debian package is too old
-git clone https://github.com/neovim/neovim --depth=1
-cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
-cd build && cpack -G DEB && sudo dpkg -i neovim/build/nvim-linux-x86_64.deb
+echo "-----> installing packages"
+sudo apt install ripgrep zsh clang gh cmake build-essential software-properties-common zsh-autosuggestions zsh-syntax-highlighting python-dev python-pip python3-dev python3-pip -y
 
+echo "-----> installing neovim"
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+echo "-----> installing atuin"
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 sudo chsh $USER -s "$(which zsh)"
+
+echo "-----> installing starship"
+curl -sS https://starship.rs/install.sh | sh
