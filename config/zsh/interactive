@@ -24,8 +24,10 @@ fi
 
 if [ -d "$XDG_CACHE_HOME" ]; then
 	autoload -Uz compinit
+	fpath=(~/.zsh/completions $fpath)
 	mkdir -p "$XDG_CACHE_HOME/zsh"
 	compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+	compdef _talk talk
 fi
 
 # force emacs bindings
@@ -60,6 +62,8 @@ fi
 
 # aliases
 alias fs="swiftformat ."
+alias wip="git commit -m wip"
 
 # we like a skinny cursor
 precmd() { echo -ne '\e[5 q' }
+
