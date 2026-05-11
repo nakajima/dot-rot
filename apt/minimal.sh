@@ -3,7 +3,7 @@ sudo apt update
 sudo apt upgrade -y
 
 echo "-----> installing packages"
-sudo apt install ripgrep zsh clang gh cmake build-essential software-properties-common zsh-autosuggestions zsh-syntax-highlighting python-dev python-pip python3-dev python3-pip -y
+sudo apt install ripgrep zsh clang gh cmake build-essential zsh-autosuggestions zsh-syntax-highlighting python3-dev python3-pip -y
 
 echo "-----> installing neovim"
 sudo add-apt-repository ppa:neovim-ppa/stable
